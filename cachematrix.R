@@ -3,18 +3,18 @@
 ## which is actually a list containing functions to
 ## get and set the value of the matrix and to retrieve its inverse
 makeCacheMatrix <- function(x = matrix()) {
-inv <- NULL
-## Set the value of the matrix; remove cached inverse
-set <- function(y){
-     x <<- y
-     inv <<- NULL
-}
-get <- function() x
-setinverse <- function(i) {inv <<- i}
-getinverse <- function() inv
-list(set = set, get = get, 
-     setinverse = setinverse,
-     getinverse = getinverse)
+     inv <- NULL
+     ## Set the value of the matrix; remove cached inverse
+     set <- function(y){
+          x <<- y
+          inv <<- NULL
+     }
+     get <- function() x
+     setinverse <- function(i) {inv <<- i}
+     getinverse <- function() inv
+     list(set = set, get = get, 
+          setinverse = setinverse,
+          getinverse = getinverse)
 }
 
 
